@@ -11,12 +11,12 @@ use Illuminate\Support\Facades\Hash;
 class UserController extends Controller
 {
     public function getAllusers(){
-        $user = Auth::user();
-        if($user && $user->user_type == 'محامي'){
+        
+       
             return response()->json([
                 'users' => User::all()
             ]);
-        }
+        
     }
 
     public function editUsers(Request $request,$user_id){
